@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MANUFAKTURA</title>
+    
+    <!-- Google Fonts Connection: Оставляем только Jost для заголовка --> <!-- ИЗМЕНЕНИЕ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+
     <style>
         /* Переменные для удобного управления цветами */
         :root {
@@ -15,9 +21,10 @@
         html, body {
             height: 100%;
             margin: 0;
+            /* ИЗМЕНЕНИЕ: Возвращаем стандартный системный шрифт для всего текста */
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background-color: var(--white-color); /* Абсолютно белый фон */
-            color: var(--brown-color); /* Коричневый цвет текста по умолчанию */
+            background-color: var(--white-color);
+            color: var(--brown-color);
         }
 
         /* Структура страницы с flexbox для прижатия footer'а к низу */
@@ -30,9 +37,11 @@
         .header {
             text-align: center;
             padding: 30px 20px;
-            font-size: 2em;
-            font-weight: bold;
-            letter-spacing: 4px;
+            font-size: 2.2em;
+            letter-spacing: 5px;
+            /* Оставляем шрифт Jost для заголовка */
+            font-family: 'Jost', sans-serif;
+            font-weight: 500; /* Medium */
         }
 
         /* Основной контейнер, который будет расти и занимать все доступное место */
@@ -45,7 +54,7 @@
 
         /* Стили для каждой из двух половин */
         .half {
-            flex: 1; /* Каждая половина занимает одинаковое пространство */
+            flex: 1;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -64,24 +73,25 @@
             margin-top: 0;
             margin-bottom: 25px;
             font-size: 1.8em;
+            font-weight: 500;
         }
 
         /* Стили для кнопок-ссылок */
         .btn {
             display: inline-block;
             padding: 15px 35px;
-            background-color: var(--brown-color); /* Коричневый фон кнопки */
-            color: var(--white-color); /* Белый текст на кнопке */
+            background-color: var(--brown-color);
+            color: var(--white-color);
             text-decoration: none;
             font-size: 1.1em;
-            font-weight: bold;
+            font-weight: bold; /* Используем стандартный bold системного шрифта */
             border-radius: 5px;
             transition: transform 0.2s ease, background-color 0.2s ease;
         }
 
         .btn:hover {
-            transform: scale(1.05); /* Небольшое увеличение при наведении */
-            background-color: rgb(104, 78, 43); /* Чуть светлее коричневый для эффекта */
+            transform: scale(1.05);
+            background-color: rgb(104, 78, 43);
         }
 
         /* Стили для подвала (footer) */
@@ -89,29 +99,29 @@
             text-align: center;
             padding: 25px 20px;
             font-size: 0.9em;
-            color: rgba(84, 58, 23, 0.7); /* Сделаем текст чуть менее заметным */
+            color: rgba(84, 58, 23, 0.7);
         }
 
         /* Адаптивность для мобильных устройств */
         @media (max-width: 768px) {
             .header {
-                font-size: 1.5em;
+                font-size: 1.8em;
                 padding: 20px;
             }
 
             .main-content {
-                flex-direction: column; /* Ставим блоки друг под друга */
+                flex-direction: column;
                 border-top: 1px solid var(--brown-color);
                 border-bottom: none;
             }
 
             .half {
-                padding: 50px 20px; /* Увеличим вертикальный отступ */
+                padding: 50px 20px;
             }
 
             .half:first-child {
-                border-right: none; /* Убираем вертикальный разделитель */
-                border-bottom: 1px solid var(--brown-color); /* Добавляем горизонтальный */
+                border-right: none;
+                border-bottom: 1px solid var(--brown-color);
             }
 
             .half h2 {
@@ -137,7 +147,7 @@
         <div class="half">
             <h2>Система лояльности</h2>
             <a href="https://iiko.biz/L/07467" class="btn" target="_blank" rel="noopener noreferrer">
-                Открыть карту
+                Карта лояльности
             </a>
         </div>
     </main>
